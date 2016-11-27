@@ -1,0 +1,56 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.emanueletonucci.etchronorace.MainActivity">
+    <item
+        android:id="@+id/action_connect"
+        android:orderInCategory="10"
+        android:title="@string/action_connect"
+        app:showAsAction="never">
+        <menu>
+            <group android:id="@+id/group_1">
+            <item
+                android:id="@+id/usbConnection"
+                android:title="@string/USB"
+                android:orderInCategory="11"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/udpConnection"
+                android:title="@string/UDP"
+                android:orderInCategory="12"
+                app:showAsAction="ifRoom" />
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/action_map"
+        android:title="@string/action_map" >
+        android:orderInCategory="20">
+        <menu>
+            <item
+                android:id="@+id/action_map_hybrid"
+                android:title="@string/hybrid"
+                android:orderInCategory="30"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/action_map_normal"
+                android:title="@string/normal"
+                android:orderInCategory="31"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/action_map_satellite"
+                android:title="@string/satellite"
+                android:orderInCategory="32"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/action_map_terrain"
+                android:title="@string/terrain"
+                android:orderInCategory="33"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+
+</menu>

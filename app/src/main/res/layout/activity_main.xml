@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.emanueletonucci.etchronorace.MainActivity"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:id="@+id/map_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/InnerRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:id="@+id/LinearLayout00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
+            <LinearLayout
+                android:id="@+id/LinearLayout01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="bottom">
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/chronoView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    app:srcCompat="@drawable/ic_sub_24dp"
+                    app:backgroundTint="@android:color/background_light"
+                    app:fabSize="mini"/>
+                <!--
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/telemetryView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    app:srcCompat="@drawable/pitch_icon"
+                    app:backgroundTint="@android:color/holo_red_dark" />
+                -->
+</LinearLayout>
+            <LinearLayout
+                android:id="@+id/LinearLayout02"
+                android:layout_width="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="5dp">
+
+                    <ScrollView
+                        android:id="@+id/scrollViewLaps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="false">
+                        <TableLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tableLayoutChronoRow"
+                            android:padding="3dp"
+                            tools:layout_anchorGravity="bottom"
+                            android:background="#AA676767">
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/Laps"
+                            android:baselineAligned="false">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:text="Lap"
+                                android:layout_column="0"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="1dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat"
+                                android:textSize="10sp"
+                                android:textColor="@color/colorGridFont"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:text="Split 1"
+                                android:layout_column="1"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="1dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat"
+                                android:textSize="10sp"
+                                android:textColor="@color/colorGridFont"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:text="Split 2"
+                                android:layout_column="0"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="1dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat"
+                                android:textSize="10sp"
+                                android:textColor="@color/colorGridFont"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:text="Split 3"
+                                android:layout_column="1"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="1dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat"
+                                android:textSize="10sp"
+                                android:textColor="@color/colorGridFont"
+                                android:textAlignment="center" />
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:text="Finish"
+                                android:layout_column="1"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="1dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat"
+                                android:textSize="10sp"
+                                android:textColor="@color/colorGridFont"
+                                android:textAlignment="center" />
+                            <TextView
+                                android:layout_width="25dp"
+                                android:layout_height="wrap_content"
+                                android:text="Best"
+                                android:layout_column="1"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="1dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat"
+                                android:textSize="10sp"
+                                android:textColor="@color/colorGridFont"
+                                android:textAlignment="center" />
+                        </TableRow>
+                        </TableLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp">
+
+                    <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tableLayoutTelemetry"
+                    android:background ="#AA676767"
+                    android:padding="3dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/vehTelemRow1"
+                        android:baselineAligned="false">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="Altitude:"
+                            android:id="@+id/altitudeLabelTextView"
+                            android:layout_column="0"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="bottom"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="0m"
+                            android:id="@+id/altitudeValue"
+                            android:layout_column="1"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="left"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="Speed:"
+                            android:id="@+id/speedLabelTextView"
+                            android:layout_column="0"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="0m/s"
+                            android:id="@+id/speedValue"
+                            android:layout_column="1"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="left"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/vehTelemRow2">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:text="Latitude:"
+                            android:id="@+id/latitudeLabelTextView"
+                            android:layout_column="0"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/latitudeValue"
+                            android:layout_column="1"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="left"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:text="Longitude:"
+                            android:id="@+id/longitudeLabelTextView"
+                            android:layout_column="0"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/longitudeValue"
+                            android:layout_column="1"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="left"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/vehTelemRow3">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:text="Heading:"
+                            android:id="@+id/headingLabelTextView"
+                            android:layout_column="0"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0°"
+                            android:id="@+id/HeadingValue"
+                            android:layout_column="1"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="left"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:text="Distance:"
+                            android:id="@+id/distanceLabelTextView"
+                            android:layout_column="0"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0m"
+                            android:id="@+id/distanceValue"
+                            android:layout_column="1"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="left"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/vehTelemRow4">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:text="Roll:"
+                            android:id="@+id/rollLabelTextView"
+                            android:layout_column="0"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0°"
+                            android:id="@+id/RollValue"
+                            android:layout_column="1"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="left"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:text="Pitch:"
+                            android:id="@+id/pitchLabelTextView"
+                            android:layout_column="0"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0°"
+                            android:id="@+id/PitchValue"
+                            android:layout_column="1"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="left"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/vehTelemRow5">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:text="Mode:"
+                            android:id="@+id/modeLabelTextView"
+                            android:layout_column="0"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/ModeValue"
+                            android:layout_column="1"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="left"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:text="State:"
+                            android:id="@+id/stateLabelTextView"
+                            android:layout_column="0"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/StateValue"
+                            android:layout_column="1"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:layout_gravity="left"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorGridFont"/>
+                    </TableRow>
+                </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="#00FFFFFF"
+        app:elevation="1dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="@color/colorToolbar"
+            android:elevation="1dp"
+            android:layout_margin="0dp"
+            android:layout_height="40dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableLayoutChrono"
+            android:background ="@color/colorToolbarChrono"
+            android:padding="3dp"
+            tools:layout_anchorGravity="bottom">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/Chrono"
+                android:baselineAligned="false">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="TIME: 00:00:000"
+                    android:layout_column="0"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/txtChrono"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp" />
+
+                <ImageView
+                    app:srcCompat="@android:color/transparent"
+                    android:id="@+id/imageViewBest"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="30dp" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="BEST: 00:00:000"
+                    android:layout_column="0"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:id="@+id/txtChronoBest"
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp" />
+
+            </TableRow>
+        </TableLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

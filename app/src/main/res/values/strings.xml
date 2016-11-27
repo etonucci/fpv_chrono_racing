@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FPV Chrono Racing</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="google_maps_key">AIzaSyAULGBI0XNjTNTaY6NciT0VkCYrd8eryro</string>
+    <string name="action_connect">CONNECT</string>
+    <string name="action_disconnect">DISCONNECT</string>
+    <string name="action_map">MAP TYPE</string>
+    <string name="hybrid">HYBRID</string>
+    <string name="normal">NORMAL</string>
+    <string name="satellite">SATELLITE</string>
+    <string name="terrain">TERRAIN</string>
+    <string name="USB">USB</string>
+    <string name="UDP">UDP</string>
+</resources>
