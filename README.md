@@ -9,4 +9,4 @@ FPV CHRONO RACING is based on DRONEKIT (DroneKit-Android's) developed by 3D Robo
 So try FPV CHRONO RACING! and help me to increase the features of this fantastic App!
 
 ![FPV Chrono Racing horiz](app/unnamed1.jpg)
-![FPV Chrono Racing vert](https://github.com/etonucci/fpv_chrono_racing/master/app/unnamed2.jpg)
+![FPV Chrono Racing vert](app/unnamed2.jpg)
