@@ -8,4 +8,5 @@ If you have a flight controller like PIXHAWK, PIXRACER or an APM, through their 
 FPV CHRONO RACING is based on DRONEKIT (DroneKit-Android's) developed by 3D Robotics and ensures maximum efficiency in data acquisition.
 So try FPV CHRONO RACING! and help me to increase the features of this fantastic App!
 
-
+![FPV Chrono Racing horiz](https://github.com/etonucci/fpv_chrono_racing/upload/master/app/unnamed1.jpg)
+![FPV Chrono Racing vert](https://github.com/etonucci/fpv_chrono_racing/upload/master/app/unnamed2.jpg)
